@@ -27,6 +27,7 @@ function get_seo_meta_elements() {
 		'description' => 'pb_about_50',
 		'keywords' => 'pb_keywords_tags',
 		'publisher' => 'pb_publisher',
+		'publisher_city' => 'pb_publisher_city'
 	];
 	$html = "<meta name='application-name' content='Pressbooks'>\n";
 	$metadata = Book::getBookInformation();
@@ -65,6 +66,7 @@ function get_microdata_elements() {
 		'inLanguage' => 'pb_language',
 		'keywords' => 'pb_keywords_tags',
 		'publisher' => 'pb_publisher',
+		'publisher_city' => 'pb_publisher_city',
 		'isBasedOn' => 'pb_is_based_on',
 	];
 	$metadata = Book::getBookInformation();
@@ -311,6 +313,8 @@ function book_information_to_schema( $book_information ) {
 			'@type' => 'Organization',
 			'name' => $book_information['pb_publisher'],
 		];
+
+		
 
 		if ( isset( $book_information['pb_publisher_city'] ) ) {
 			$book_schema['publisher']['address'] = [

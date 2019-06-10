@@ -111,6 +111,10 @@ echo '<?xml version="1.0" encoding="UTF-8" ?>' . "\n";
 					echo "<dc:publisher>$val</dc:publisher>\n";
 					break;
 
+					case 'pb_publisher_city':
+						echo "<dc:publisher_city>$val</dc:publisher_city>\n";
+						break;
+
 				case 'pb_publication_date':
 					echo '<dc:date opf:event="publication">';
 					echo date( 'Y-m-d', (int) $val );

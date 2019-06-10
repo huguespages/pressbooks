@@ -44,6 +44,10 @@ echo '<?xml version="1.0" encoding="utf-8" ?>' . "\n";
 		<p class="publisher"><strong>Publisher</strong>: <?php echo $meta['pb_publisher']; ?></p>
 	<?php } ?>
 
+	<?php if ( isset( $meta['pb_publisher_city'] ) ) { ?>
+		<p class="publisher_city"><strong>Publishercity</strong>: <?php echo $meta['pb_publisher_city']; ?></p>
+	<?php } ?>
+
 	<?php if ( isset( $meta['pb_copyright_year'] ) || isset( $meta['pb_copyright_holder'] ) ) { ?>
 		<p class="copyright_notice"><strong>Copyright</strong>:
 			<?php
